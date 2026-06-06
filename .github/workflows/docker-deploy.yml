@@ -29,7 +29,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            docker pull TU_USUARIO_DOCKER/flask-edwincordero:latest
-            docker stop app-phantom || true
-            docker rm app-phantom || true
-            docker run -d --name app-phantom -p 80:5000 TU_USUARIO_DOCKER/flask-edwincordero:latest
+            sudo docker pull rcordero1/flask-edwincordero:latest
+            sudo docker stop app-phantom || true
+            sudo docker rm app-phantom || true
+            sudo docker run -d --name app-phantom -p 80:5000 rcordero1/flask-edwincordero:latest
